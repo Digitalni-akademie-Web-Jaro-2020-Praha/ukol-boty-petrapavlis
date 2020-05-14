@@ -48,14 +48,9 @@ body {
   box-shadow: 0px 0px 10px 1px #c0c0c0;
 }
 
-.vizual,
-.detaily {
-  flex-direction: column;
-  width: 50%;
-  padding: 30px;
-}
-
 .vizual {
+  display: block;
+  width: 50%;
   background: linear-gradient(
     180deg,
     rgba(6, 215, 193, 1) 30%,
@@ -64,6 +59,7 @@ body {
   color: white;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  padding: 30px;
 }
 
 .slogan {
@@ -95,11 +91,18 @@ body {
   line-height: 2rem;
 }
 
+.detaily {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 30px;
+}
+
 h1 {
   font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
-  margin-top: 0;
+  margin: 0;
 }
 
 .produkt {
@@ -108,7 +111,6 @@ h1 {
 
 .popis {
   border-bottom: solid #06d7c1 1px;
-  margin-top: 30px;
   padding-bottom: 30px;
 }
 
@@ -116,33 +118,35 @@ h2 {
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .velikosti {
-  display: flex;
   list-style: none;
-  justify-content: space-around;
-  align-items: center;
-}
-
-ul {
+  display: flex;
+  flex-direction: row;
   padding: 0;
+  margin: 0;
+  width: 85%;
 }
 
 li {
-  cursor: pointer;
+  border: 1px solid transparent;
+  margin: auto;
+  padding: 5px;
+  width: 30px;
 }
 
 .vybrana,
 li:hover {
+  cursor: pointer;
   border: solid #f15f42 1px;
   border-radius: 50%;
-  padding: 5px;
   color: #f15f42;
 }
 
 .tlacitko {
+  display: block;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.1rem;
